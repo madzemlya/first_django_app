@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="D:\PYTHON OTUS WORKS\flaska_v.4\static\styles.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Index</title>
+</head>
+<body>
+<div>
+    <h1>Hello django blog index!</h1>
+    <ul>
+        <li>foo: {{ foo }}</li>
+        <li>spam: {{ spam }}</li>
+        <li>___</li>
+        <li>
+            Article #{{ article.id }}
+            with title {{ article.name }}
+            with text {{ article.tittle }}
+        </li>
+    </ul>
+    <hr>
+    <h3>Lessons:</h3>
+    <ul>
+        {% for lesson in all_lessons %}
+            <li>
+                <div>
+                    Lesson #{{ lesson.id }}
+                    with title {{ lesson.tittle }}
+                </div>
+                <div>
+                    published on {{ lesson.course }}
+                </div>
+                <div>
+                    by {{ lesson.lecturer }}
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+    <hr>
+</div>
+</body>
+</html>
